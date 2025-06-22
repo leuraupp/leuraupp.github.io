@@ -237,6 +237,28 @@
             color: var(--secondary-color);
         }
 
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .play-link {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .play-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+            color: white !important;
+        }
+
         /* Skills */
         .skill-item {
             background: var(--bg-card);
@@ -391,8 +413,14 @@
                 <h4 class="project-title">Monsters And Soldiers</h4>
                 <p class="project-description">A personal project where I'm developing a puzzle game inspired by "Tents and Trees", but with custom rules and a unique theme.<br>
                     The game is being built from scratch, featuring grid-based mechanics and animations. All programming is done entirely by me, while the visual assets are sourced from free or purchased asset packs available online.</p>
-                <a href="https://github.com/leuraupp/MonstersAndSoldiers2" target="_blank" class="project-link">
-                    <i class="fas fa-external-link-alt me-2"></i>See on GitHub</a>
+                <div class="project-links">
+                    <a href="https://github.com/leuraupp/MonstersAndSoldiers2" target="_blank" class="project-link">
+                        <i class="fab fa-github me-2"></i>View on GitHub
+                    </a>
+                    <a href="games/monsters-and-soldiers/index.html" target="_blank" class="project-link play-link">
+                        <i class="fas fa-gamepad me-2"></i>Play Demo
+                    </a>
+                </div>
             </div>
         </div>
         
@@ -401,9 +429,11 @@
                 <img src="assets/images/project-2.gif" alt="Projeto 2" class="img-fluid project-image">
                 <h4 class="project-title">[Título do Projeto 2]</h4>
                 <p class="project-description">[Breve descrição do projeto e tecnologias utilizadas]</p>
-                <a href="[Link do projeto]" target="_blank" class="project-link">
-                    <i class="fas fa-external-link-alt me-2"></i>Ver Projeto
-                </a>
+                <div class="project-links">
+                    <a href="[Link do projeto]" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt me-2"></i>View Project
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -548,4 +578,4 @@
     });
 </script>
 </body>
-</html>
+</html> 
