@@ -347,6 +347,34 @@
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
         }
+
+        /* Certificate Links */
+        .certificate-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .cert-link {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .cert-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+            color: white;
+            border-color: var(--accent-color);
+        }
     </style>
 </head>
 <body>
@@ -429,7 +457,7 @@
                 <img src="assets/images/ebac-plataformer2d.gif" alt="Projeto 2" class="img-fluid project-image">
                 <h4 class="project-title">EBAC - Plataformer 2D</h4>
                 <p class="project-description">This project is part of the EBAC course "Unity: Zero to Pro".<br>
-                It’s a simple 2D platformer game where the player can move from side to side, featuring character animations, enemy animations, UI elements, item collection, and sound effects (SFX).</p>
+                It's a simple 2D platformer game where the player can move from side to side, featuring character animations, enemy animations, UI elements, item collection, and sound effects (SFX).</p>
                 <div class="project-links">
                     <a href="https://github.com/leuraupp/EBAC-Plataformer2D" target="_blank" class="project-link">
                         <i class="fas fa-external-link-alt me-2"></i>View on GitHub
@@ -478,32 +506,107 @@
     <div class="row">
         <div class="col-lg-6 mb-4">
             <div class="profile-card fade-in">
-                <h4><i class="fas fa-briefcase me-2"></i>Experiência Profissional</h4>
+                <h4><i class="fas fa-briefcase me-2"></i>Professions</h4>
                 <div class="skill-item">
-                    <h6>[Cargo/Posição]</h6>
-                    <p class="text-secondary">[Empresa] • [Período]</p>
-                    <p class="text-secondary">[Descrição das responsabilidades]</p>
-                </div>
-                <div class="skill-item">
-                    <h6>[Cargo/Posição]</h6>
-                    <p class="text-secondary">[Empresa] • [Período]</p>
-                    <p class="text-secondary">[Descrição das responsabilidades]</p>
+                    <h6>Game Developer Senior at Fontec</h6>
+                    <p class="text-secondary">GameVelvet • 2013 - Present</p>
+                    <p class="text-secondary">Full-cycle game developer: from concept to completion</p>
+                    <p class="text-secondary">Specialized in ActionScript 3, Java, and Adobe Animate</p>
                 </div>
             </div>
         </div>
         
         <div class="col-lg-6 mb-4">
             <div class="profile-card fade-in">
-                <h4><i class="fas fa-graduation-cap me-2"></i>Formação</h4>
+                <h4><i class="fas fa-code me-2"></i>Skills</h4>
                 <div class="skill-item">
-                    <h6>[Nome do Curso]</h6>
-                    <p class="text-secondary">[Instituição] • [Ano]</p>
+                    <h6><i class="fas fa-laptop-code me-2"></i>Programming Languages</h6>
+                    <p class="text-secondary">Java, ActionScript 3, C#</p>
                 </div>
-                
-                <h4 class="mt-4"><i class="fas fa-certificate me-2"></i>Certificações</h4>
                 <div class="skill-item">
-                    <h6>[Nome da Certificação]</h6>
-                    <p class="text-secondary">[Instituição] • [Ano]</p>
+                    <h6><i class="fab fa-unity me-2"></i>Game Engines</h6>
+                    <p class="text-secondary">Unity, Adobe Animate</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-gamepad me-2"></i>Game Development</h6>
+                    <p class="text-secondary">Game Design Principles, Bug Fixing, Maintenance</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-cogs me-2"></i>Implementation</h6>
+                    <p class="text-secondary">Gameplay Mechanics, Business Rules, Logic Development</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-users me-2"></i>Collaboration</h6>
+                    <p class="text-secondary">Teamwork and Cross-functional Collaboration</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="profile-card fade-in">
+                <h4><i class="fas fa-graduation-cap me-2"></i>Education</h4>
+                <div class="skill-item">
+                    <h6><i class="fas fa-university me-2"></i>Bachelor's Degree - Technology in Digital Games</h6>
+                    <p class="text-secondary">Univali - Universidade do Vale do Itajaí • 2012 - 2017</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-book-open me-2"></i>Unity: Zero to Pro (Ongoing)</h6>
+                    <p class="text-secondary">EBAC - Britain School of Arts and Technology • 2023 - Present</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+            <div class="profile-card fade-in">
+                <h4><i class="fas fa-certificate me-2"></i>Certifications</h4>
+                <div class="skill-item">
+                    <h6><i class="fas fa-award me-2"></i>Unity 2D Series</h6>
+                    <p class="text-secondary">Part 1: Creating a 2D Game</p>
+                    <p class="text-secondary">Part 2: Adding Visual Effects to Your Game</p>
+                    <p class="text-secondary">Part 3: Creating a Multiplayer Game</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-star me-2"></i>Unity Development</h6>
+                    <p class="text-secondary">Intro to Game Development with Unity</p>
+                    <p class="text-secondary">Unity Mini-Projects - C# Fundamentals</p>
+                    <p class="text-secondary">Create Your First 3D Game in Unity</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-trophy me-2"></i>Advanced Unity</h6>
+                    <p class="text-secondary">Construct a Micro-Farming RPG in Unity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="profile-card fade-in">
+                <h4><i class="fas fa-link me-2"></i>Certificate Links</h4>
+                <div class="certificate-links">
+                    <a href="https://cursos.alura.com.br/certificate/29528f08-cba5-4b56-9c57-5d3e3f5232aa?lang=pt_BR" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Alura Certificate 1
+                    </a>
+                    <a href="https://cursos.alura.com.br/certificate/b7cd8936-5c46-4c47-8b81-543cab8a745a?lang=pt_BR" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Alura Certificate 2
+                    </a>
+                    <a href="https://cursos.alura.com.br/certificate/32acb6aa-9b78-4ac3-9563-93729db1d4b3?lang=pt_BR" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Alura Certificate 3
+                    </a>
+                    <a href="https://academy.zenva.com/certificate/b4e735241626" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 1
+                    </a>
+                    <a href="https://academy.zenva.com/certificate/55b8859326b9" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 2
+                    </a>
+                    <a href="https://academy.zenva.com/certificate/37bcbb20fb6c" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 3
+                    </a>
+                    <a href="https://academy.zenva.com/certificate/6a0aba6cff5c" target="_blank" class="cert-link">
+                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 4
+                    </a>
                 </div>
             </div>
         </div>
