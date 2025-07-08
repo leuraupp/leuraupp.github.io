@@ -657,7 +657,7 @@
 <section id="projects" class="container">
     <h2 class="section-title fade-in">Projects</h2>
     
-    <div id="projectsCarousel" class="carousel slide projects-carousel" data-bs-ride="carousel" data-bs-interval="false">
+    <div id="projectsCarousel" class="carousel slide projects-carousel" data-bs-interval="false">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="row justify-content-center">
@@ -859,7 +859,7 @@
             <div class="profile-card fade-in">
                 <h4><i class="fas fa-certificate me-2"></i>Certificates Gallery</h4>
                 
-                <div id="certificatesCarousel" class="carousel slide certificate-carousel" data-bs-ride="carousel" data-bs-interval="false">
+                <div id="certificatesCarousel" class="carousel slide certificate-carousel" data-bs-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="row justify-content-center">
@@ -1068,7 +1068,8 @@
         const carousel = new bootstrap.Carousel(projectsCarousel, {
             interval: false,
             wrap: true,
-            keyboard: true
+            keyboard: true,
+            pause: 'hover'
         });
 
         // Add fade-in animation to carousel items when they become active
@@ -1100,7 +1101,8 @@
         const carousel = new bootstrap.Carousel(certificatesCarousel, {
             interval: false,
             wrap: true,
-            keyboard: true
+            keyboard: true,
+            pause: 'hover'
         });
 
         // Add fade-in animation to carousel items when they become active
