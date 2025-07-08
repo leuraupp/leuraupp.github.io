@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Template</title>
+</head>
+<body>
+    <h2>Certificate Carousel Template</h2>
+    
+    <h3>For Alura Certificates:</h3>
+    <pre><code>&lt;div class="carousel-item"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-lg-8"&gt;
+            &lt;div class="certificate-card fade-in"&gt;
+                &lt;img src="assets/images/certificates/alura-certificate-X.jpg" alt="Alura Certificate X" class="certificate-image"&gt;
+                &lt;h5 class="certificate-title"&gt;Unity Course Title&lt;/h5&gt;
+                &lt;p class="certificate-description"&gt;Course description&lt;/p&gt;
+                &lt;a href="https://cursos.alura.com.br/certificate/YOUR-CERTIFICATE-ID?lang=pt_BR" target="_blank" class="certificate-link"&gt;
+                    &lt;i class="fas fa-external-link-alt me-2"&gt;&lt;/i&gt;View Certificate
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <h3>For Zenva Certificates:</h3>
+    <pre><code>&lt;div class="carousel-item"&gt;
+    &lt;div class="row justify-content-center"&gt;
+        &lt;div class="col-lg-8"&gt;
+            &lt;div class="certificate-card fade-in"&gt;
+                &lt;img src="assets/images/certificates/zenva-certificate-X.jpg" alt="Zenva Certificate X" class="certificate-image"&gt;
+                &lt;h5 class="certificate-title"&gt;Unity Course Title&lt;/h5&gt;
+                &lt;p class="certificate-description"&gt;Course description&lt;/p&gt;
+                &lt;a href="https://academy.zenva.com/certificate/YOUR-CERTIFICATE-ID" target="_blank" class="certificate-link"&gt;
+                    &lt;i class="fas fa-external-link-alt me-2"&gt;&lt;/i&gt;View Certificate
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <h3>Don't forget to update the indicators:</h3>
+    <pre><code>&lt;button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="X" aria-label="Slide X+1"&gt;&lt;/button&gt;</code></pre>
+
+    <h3>Steps to add a new certificate:</h3>
+    <ol>
+        <li>Save the certificate image in <code>assets/images/certificates/</code></li>
+        <li>Copy the appropriate template above</li>
+        <li>Replace the placeholders:
+            <ul>
+                <li><code>X</code> - Next number in sequence</li>
+                <li><code>YOUR-CERTIFICATE-ID</code> - The actual certificate ID from the URL</li>
+                <li>Course title and description</li>
+            </ul>
+        </li>
+        <li>Add the new carousel-item to the carousel-inner</li>
+        <li>Add a new indicator button</li>
+        <li>Update the slide-to numbers in the indicators</li>
+    </ol>
+</body>
+</html> 

@@ -467,6 +467,137 @@
             color: white;
             border-color: var(--accent-color);
         }
+
+        /* Certificate Carousel Styles */
+        .certificate-carousel {
+            position: relative;
+            padding: 0 60px;
+        }
+
+        .certificate-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .certificate-image {
+            width: 100%;
+            max-width: 400px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .certificate-card:hover .certificate-image {
+            transform: scale(1.02);
+            border-color: var(--primary-color);
+        }
+
+        .certificate-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .certificate-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .certificate-link {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .certificate-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
+            color: white !important;
+            border-color: var(--secondary-color);
+        }
+
+        /* Certificate Carousel Controls */
+        .certificate-carousel .carousel-control-prev,
+        .certificate-carousel .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            border: none;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-carousel .carousel-control-prev:hover,
+        .certificate-carousel .carousel-control-next:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .certificate-carousel .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .certificate-carousel .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+            border: none;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-carousel .carousel-indicators [data-bs-target].active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: scale(1.2);
+        }
+
+        /* Responsive adjustments for certificate carousel */
+        @media (max-width: 768px) {
+            .certificate-carousel {
+                padding: 0 40px;
+            }
+            
+            .certificate-carousel .carousel-control-prev,
+            .certificate-carousel .carousel-control-next {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .certificate-carousel .carousel-indicators {
+                bottom: -40px;
+            }
+            
+            .certificate-image {
+                height: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -692,8 +823,8 @@
                     <p class="text-secondary">Univali - Universidade do Vale do Itajaí • 2012 - 2017</p>
                 </div>
                 <div class="skill-item">
-                    <h6><i class="fas fa-book-open me-2"></i>Unity: Zero to Pro (Ongoing)</h6>
-                    <p class="text-secondary">EBAC - Britain School of Arts and Technology • 2023 - Present</p>
+                    <h6><i class="fas fa-book-open me-2"></i>Unity: Zero to Pro</h6>
+                    <p class="text-secondary">EBAC - Britain School of Arts and Technology • 2023 - 2025</p>
                 </div>
             </div>
         </div>
@@ -724,31 +855,136 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-lg-10">
             <div class="profile-card fade-in">
-                <h4><i class="fas fa-link me-2"></i>Certificate Links</h4>
-                <div class="certificate-links">
-                    <a href="https://cursos.alura.com.br/certificate/29528f08-cba5-4b56-9c57-5d3e3f5232aa?lang=pt_BR" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Alura Certificate 1
-                    </a>
-                    <a href="https://cursos.alura.com.br/certificate/b7cd8936-5c46-4c47-8b81-543cab8a745a?lang=pt_BR" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Alura Certificate 2
-                    </a>
-                    <a href="https://cursos.alura.com.br/certificate/32acb6aa-9b78-4ac3-9563-93729db1d4b3?lang=pt_BR" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Alura Certificate 3
-                    </a>
-                    <a href="https://academy.zenva.com/certificate/b4e735241626" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 1
-                    </a>
-                    <a href="https://academy.zenva.com/certificate/55b8859326b9" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 2
-                    </a>
-                    <a href="https://academy.zenva.com/certificate/37bcbb20fb6c" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 3
-                    </a>
-                    <a href="https://academy.zenva.com/certificate/6a0aba6cff5c" target="_blank" class="cert-link">
-                        <i class="fas fa-certificate me-2"></i>Zenva Certificate 4
-                    </a>
+                <h4><i class="fas fa-certificate me-2"></i>Certificates Gallery</h4>
+                
+                <div id="certificatesCarousel" class="carousel slide certificate-carousel" data-bs-ride="carousel" data-bs-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/alura-certificate-1.jpg" alt="Alura Certificate 1" class="certificate-image">
+                                        <h5 class="certificate-title">Unity 2D Series - Part 1</h5>
+                                        <p class="certificate-description">Creating a 2D Game with Unity</p>
+                                        <a href="https://cursos.alura.com.br/certificate/29528f08-cba5-4b56-9c57-5d3e3f5232aa?lang=pt_BR" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/alura-certificate-2.jpg" alt="Alura Certificate 2" class="certificate-image">
+                                        <h5 class="certificate-title">Unity 2D Series - Part 2</h5>
+                                        <p class="certificate-description">Adding Visual Effects to Your Game</p>
+                                        <a href="https://cursos.alura.com.br/certificate/b7cd8936-5c46-4c47-8b81-543cab8a745a?lang=pt_BR" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/alura-certificate-3.jpg" alt="Alura Certificate 3" class="certificate-image">
+                                        <h5 class="certificate-title">Unity 2D Series - Part 3</h5>
+                                        <p class="certificate-description">Creating a Multiplayer Game</p>
+                                        <a href="https://cursos.alura.com.br/certificate/32acb6aa-9b78-4ac3-9563-93729db1d4b3?lang=pt_BR" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/zenva-certificate-1.jpg" alt="Zenva Certificate 1" class="certificate-image">
+                                        <h5 class="certificate-title">Intro to Game Development with Unity</h5>
+                                        <p class="certificate-description">Fundamentals of Unity Game Development</p>
+                                        <a href="https://academy.zenva.com/certificate/b4e735241626" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/zenva-certificate-2.jpg" alt="Zenva Certificate 2" class="certificate-image">
+                                        <h5 class="certificate-title">Unity Mini-Projects - C# Fundamentals</h5>
+                                        <p class="certificate-description">C# Programming for Unity Games</p>
+                                        <a href="https://academy.zenva.com/certificate/55b8859326b9" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/zenva-certificate-3.jpg" alt="Zenva Certificate 3" class="certificate-image">
+                                        <h5 class="certificate-title">Create Your First 3D Game in Unity</h5>
+                                        <p class="certificate-description">3D Game Development Fundamentals</p>
+                                        <a href="https://academy.zenva.com/certificate/37bcbb20fb6c" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="certificate-card fade-in">
+                                        <img src="assets/images/certificates/zenva-certificate-4.jpg" alt="Zenva Certificate 4" class="certificate-image">
+                                        <h5 class="certificate-title">Construct a Micro-Farming RPG in Unity</h5>
+                                        <p class="certificate-description">Advanced Unity Game Development</p>
+                                        <a href="https://academy.zenva.com/certificate/6a0aba6cff5c" target="_blank" class="certificate-link">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -850,6 +1086,38 @@
 
         // Initialize first slide animations
         const firstSlide = projectsCarousel.querySelector('.carousel-item.active');
+        if (firstSlide) {
+            const fadeElements = firstSlide.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.classList.add('visible');
+            });
+        }
+    }
+
+    // Certificates Carousel Enhancement
+    const certificatesCarousel = document.getElementById('certificatesCarousel');
+    if (certificatesCarousel) {
+        const carousel = new bootstrap.Carousel(certificatesCarousel, {
+            interval: false,
+            wrap: true,
+            keyboard: true
+        });
+
+        // Add fade-in animation to carousel items when they become active
+        certificatesCarousel.addEventListener('slid.bs.carousel', function (event) {
+            const activeItem = event.target.querySelector('.carousel-item.active');
+            const fadeElements = activeItem.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(el => {
+                el.classList.remove('visible');
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 100);
+            });
+        });
+
+        // Initialize first slide animations
+        const firstSlide = certificatesCarousel.querySelector('.carousel-item.active');
         if (firstSlide) {
             const fadeElements = firstSlide.querySelectorAll('.fade-in');
             fadeElements.forEach(el => {
