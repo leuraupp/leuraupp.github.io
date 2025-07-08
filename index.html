@@ -259,6 +259,98 @@
             color: white !important;
         }
 
+        /* Carousel Custom Styles */
+        .projects-carousel {
+            position: relative;
+            padding: 0 60px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            border: none;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .carousel-control-prev {
+            left: 0;
+        }
+
+        .carousel-control-next {
+            right: 0;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-color);
+            border: none;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-indicators [data-bs-target].active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: scale(1.2);
+        }
+
+        .carousel-item {
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .carousel-item.active {
+            transform: translateX(0);
+        }
+
+        .carousel-item-next {
+            transform: translateX(100%);
+        }
+
+        .carousel-item-prev {
+            transform: translateX(-100%);
+        }
+
+        /* Responsive adjustments for carousel */
+        @media (max-width: 768px) {
+            .projects-carousel {
+                padding: 0 40px;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .carousel-indicators {
+                bottom: -40px;
+            }
+        }
+
         /* Skills */
         .skill-item {
             background: var(--bg-card);
@@ -434,39 +526,85 @@
 <section id="projects" class="container">
     <h2 class="section-title fade-in">Projects</h2>
     
-    <div class="row">
-        <div class="col-lg-6 mb-4">
-            <div class="project-card fade-in">
-                <img src="assets/images/monsters-and-soldiers.gif" alt="Monsters And Soldiers" class="img-fluid project-image">
-                <h4 class="project-title">Monsters And Soldiers</h4>
-                <p class="project-description">A personal project where I'm developing a puzzle game inspired by "Tents and Trees", but with custom rules and a unique theme.<br>
-                    The game is being built from scratch, featuring grid-based mechanics and animations. All programming is done entirely by me, while the visual assets are sourced from free or purchased asset packs available online.</p>
-                <div class="project-links">
-                    <a href="https://github.com/leuraupp/MonstersAndSoldiers2" target="_blank" class="project-link">
-                        <i class="fab fa-github me-2"></i>View on GitHub
-                    </a>
-                    <a href="games/monsters-and-soldiers/index.html" target="_blank" class="project-link play-link">
-                        <i class="fas fa-gamepad me-2"></i>Play Demo
-                    </a>
+    <div id="projectsCarousel" class="carousel slide projects-carousel" data-bs-ride="carousel" data-bs-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="project-card fade-in">
+                            <img src="assets/images/monsters-and-soldiers.gif" alt="Monsters And Soldiers" class="img-fluid project-image">
+                            <h4 class="project-title">Monsters And Soldiers</h4>
+                            <p class="project-description">A personal project where I'm developing a puzzle game inspired by "Tents and Trees", but with custom rules and a unique theme.<br>
+                                The game is being built from scratch, featuring grid-based mechanics and animations. All programming is done entirely by me, while the visual assets are sourced from free or purchased asset packs available online.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/leuraupp/MonstersAndSoldiers2" target="_blank" class="project-link">
+                                    <i class="fab fa-github me-2"></i>View on GitHub
+                                </a>
+                                <a href="games/monsters-and-soldiers/index.html" target="_blank" class="project-link play-link">
+                                    <i class="fas fa-gamepad me-2"></i>Play Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="project-card fade-in">
+                            <img src="assets/images/ebac-plataformer2d.gif" alt="Projeto 2" class="img-fluid project-image">
+                            <h4 class="project-title">EBAC - Plataformer 2D</h4>
+                            <p class="project-description">This project is part of the EBAC course "Unity: Zero to Pro".<br>
+                            It's a simple 2D platformer game where the player can move from side to side, featuring character animations, enemy animations, UI elements, item collection, and sound effects (SFX).</p>
+                            <div class="project-links">
+                                <a href="https://github.com/leuraupp/EBAC-Plataformer2D" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt me-2"></i>View on GitHub
+                                </a>
+                                <a href="games/ebac-plataformer2d/index.html" target="_blank" class="project-link play-link">
+                                    <i class="fas fa-gamepad me-2"></i>Play Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Template for adding more projects:
+            <div class="carousel-item">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="project-card fade-in">
+                            <img src="assets/images/your-project-image.gif" alt="Your Project" class="img-fluid project-image">
+                            <h4 class="project-title">Your Project Title</h4>
+                            <p class="project-description">Your project description here...</p>
+                            <div class="project-links">
+                                <a href="https://github.com/your-repo" target="_blank" class="project-link">
+                                    <i class="fab fa-github me-2"></i>View on GitHub
+                                </a>
+                                <a href="games/your-game/index.html" target="_blank" class="project-link play-link">
+                                    <i class="fas fa-gamepad me-2"></i>Play Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            -->
         </div>
         
-        <div class="col-lg-6 mb-4">
-            <div class="project-card fade-in">
-                <img src="assets/images/ebac-plataformer2d.gif" alt="Projeto 2" class="img-fluid project-image">
-                <h4 class="project-title">EBAC - Plataformer 2D</h4>
-                <p class="project-description">This project is part of the EBAC course "Unity: Zero to Pro".<br>
-                It's a simple 2D platformer game where the player can move from side to side, featuring character animations, enemy animations, UI elements, item collection, and sound effects (SFX).</p>
-                <div class="project-links">
-                    <a href="https://github.com/leuraupp/EBAC-Plataformer2D" target="_blank" class="project-link">
-                        <i class="fas fa-external-link-alt me-2"></i>View on GitHub
-                    </a>
-                    <a href="games/ebac-plataformer2d/index.html" target="_blank" class="project-link play-link">
-                        <i class="fas fa-gamepad me-2"></i>Play Demo
-                    </a>
-                </div>
-            </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
     </div>
 </section>
@@ -687,6 +825,38 @@
             }
         });
     });
+
+    // Projects Carousel Enhancement
+    const projectsCarousel = document.getElementById('projectsCarousel');
+    if (projectsCarousel) {
+        const carousel = new bootstrap.Carousel(projectsCarousel, {
+            interval: false,
+            wrap: true,
+            keyboard: true
+        });
+
+        // Add fade-in animation to carousel items when they become active
+        projectsCarousel.addEventListener('slid.bs.carousel', function (event) {
+            const activeItem = event.target.querySelector('.carousel-item.active');
+            const fadeElements = activeItem.querySelectorAll('.fade-in');
+            
+            fadeElements.forEach(el => {
+                el.classList.remove('visible');
+                setTimeout(() => {
+                    el.classList.add('visible');
+                }, 100);
+            });
+        });
+
+        // Initialize first slide animations
+        const firstSlide = projectsCarousel.querySelector('.carousel-item.active');
+        if (firstSlide) {
+            const fadeElements = firstSlide.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.classList.add('visible');
+            });
+        }
+    }
 </script>
 </body>
 </html> 
