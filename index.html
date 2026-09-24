@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Raupp - Game Developer</title>
+    <title>Leonardo Raupp - Freelance Game Developer (Unity)</title>
+    <meta name="description" content="Freelance game developer with 12+ years building casual, card and bingo games. Unity and C#, bug fixing, new features and Flash/AS3 porting.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -261,98 +262,6 @@
             color: white !important;
         }
 
-        /* Carousel Custom Styles */
-        .projects-carousel {
-            position: relative;
-            padding: 0 60px;
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            border: none;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.8;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            opacity: 1;
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-        }
-
-        .carousel-control-prev {
-            left: 0;
-        }
-
-        .carousel-control-next {
-            right: 0;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            width: 20px;
-            height: 20px;
-        }
-
-        .carousel-indicators {
-            bottom: -50px;
-        }
-
-        .carousel-indicators [data-bs-target] {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--border-color);
-            border: none;
-            margin: 0 5px;
-            transition: all 0.3s ease;
-        }
-
-        .carousel-indicators [data-bs-target].active {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            transform: scale(1.2);
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .carousel-item.active {
-            transform: translateX(0);
-        }
-
-        .carousel-item-next {
-            transform: translateX(100%);
-        }
-
-        .carousel-item-prev {
-            transform: translateX(-100%);
-        }
-
-        /* Responsive adjustments for carousel */
-        @media (max-width: 768px) {
-            .projects-carousel {
-                padding: 0 40px;
-            }
-            
-            .carousel-control-prev,
-            .carousel-control-next {
-                width: 40px;
-                height: 40px;
-            }
-            
-            .carousel-indicators {
-                bottom: -40px;
-            }
-        }
-
         /* Skills */
         .skill-item {
             background: var(--bg-card);
@@ -470,135 +379,109 @@
             border-color: var(--accent-color);
         }
 
-        /* Certificate Carousel Styles */
-        .certificate-carousel {
-            position: relative;
-            padding: 0 60px;
+
+        /* Hero actions */
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .certificate-card {
+        .btn-outline-light-custom {
+            border: 2px solid var(--primary-color);
+            color: var(--text-primary);
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light-custom:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Services */
+        .service-card {
             background: var(--bg-card);
+            border: 1px solid var(--border-color);
             border-radius: 20px;
             padding: 2rem;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            text-align: center;
             height: 100%;
+            transition: border-color 0.3s ease;
         }
 
-        .certificate-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        .service-card:hover {
             border-color: var(--primary-color);
         }
 
-        .certificate-image {
-            width: 100%;
-            max-width: 400px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            transition: all 0.3s ease;
-            border: 2px solid var(--border-color);
-        }
-
-        .certificate-card:hover .certificate-image {
-            transform: scale(1.02);
-            border-color: var(--primary-color);
-        }
-
-        .certificate-title {
-            font-size: 1.3rem;
-            font-weight: 600;
+        .service-card i {
+            font-size: 1.8rem;
+            color: var(--accent-color);
             margin-bottom: 1rem;
+        }
+
+        .service-card h5 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        /* Projects grid */
+        .projects-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1rem 0 1.5rem;
             color: var(--text-primary);
         }
 
-        .certificate-description {
+        .project-card .project-links {
+            justify-content: flex-start;
+            margin-top: 1rem;
+        }
+
+        .project-features {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            padding-left: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        .certificate-link {
-            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-decoration: none;
+        .project-card .project-image {
+            display: block;
+            width: 100%;
+        }
+
+        .project-tag {
             display: inline-block;
-            border: 2px solid transparent;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 3px 12px;
+            border-radius: 20px;
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--accent-color);
+            margin-bottom: 1rem;
         }
 
-        .certificate-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
-            color: white !important;
-            border-color: var(--secondary-color);
+        .pro-card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
         }
 
-        /* Certificate Carousel Controls */
-        .certificate-carousel .carousel-control-prev,
-        .certificate-carousel .carousel-control-next {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 50%;
-            border: none;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0.8;
-            transition: all 0.3s ease;
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 3px;
         }
 
-        .certificate-carousel .carousel-control-prev:hover,
-        .certificate-carousel .carousel-control-next:hover {
-            opacity: 1;
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
-        }
-
-        .certificate-carousel .carousel-indicators {
-            bottom: -50px;
-        }
-
-        .certificate-carousel .carousel-indicators [data-bs-target] {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--border-color);
-            border: none;
-            margin: 0 5px;
-            transition: all 0.3s ease;
-        }
-
-        .certificate-carousel .carousel-indicators [data-bs-target].active {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            transform: scale(1.2);
-        }
-
-        /* Responsive adjustments for certificate carousel */
-        @media (max-width: 768px) {
-            .certificate-carousel {
-                padding: 0 40px;
-            }
-            
-            .certificate-carousel .carousel-control-prev,
-            .certificate-carousel .carousel-control-next {
-                width: 40px;
-                height: 40px;
-            }
-            
-            .certificate-carousel .carousel-indicators {
-                bottom: -40px;
-            }
-            
-            .certificate-image {
-                height: 200px;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            .fade-in { opacity: 1; transform: none; transition: none; }
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
@@ -608,16 +491,17 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#">Leonardo Raupp</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                <li class="nav-item"><a class="nav-link" href="#history">History</a></li>
                 <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contacts">Contacts</a></li>
+                <li class="nav-item"><a class="nav-link" href="#history">History</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -627,8 +511,11 @@
 <section class="hero">
     <div class="hero-content fade-in">
         <h1>Leonardo Raupp</h1>
-        <p>Game Developer</p>
-        <a href="#profile" class="btn btn-primary">START</a>
+        <p>Freelance Game Developer | Unity &amp; C#<br>12+ years building casual, card and bingo games</p>
+        <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">See my work</a>
+            <a href="#contacts" class="btn-outline-light-custom">Hire me</a>
+        </div>
     </div>
 </section>
 
@@ -640,16 +527,51 @@
             <div class="profile-card fade-in">
                 <img src="assets/images/profile-photo.jpg" alt="Leonardo Raupp" class="profile-image">
                 <h3>Leonardo Luiz Raupp</h3>
-                <p class="text-secondary">Hello! I'm a passionate game developer with over 12 years of experience. I currently work with ActionScript 3 and Adobe Animate, creating games for a mobile app called GameVelvet (known as Megajogos in Portuguese - Brazil).<br>
-                    At the moment, I'm focusing on expanding my skills in Unity. I've been dedicating my time to learning, taking several courses, and working on personal projects to improve my expertise in this engine.<br>                 
-                    I hold a degree in Digital Game Technologies from Univali (Universidade do Vale do Itajaí).<br>
-                    Feel free to explore some of my Unity projects and learn more about me and my journey in game development.</p>
+                <p class="text-secondary">I'm a game developer with over 12 years of experience shipping casual, card and bingo games for GameVelvet (known as Megajogos in Brazil), a live mobile gaming platform with games like Mega Bingo and Conquian.<br><br>
+                    I work across the full cycle: gameplay, complex game rules, new features, bug fixing and long-term maintenance of games that real players use every day. Today I build games in Unity and C#, and my background in ActionScript 3 and Adobe Animate means I can also port legacy Flash games to Unity or HTML5.<br><br>
+                    I'm available for freelance projects. If you need a new game, new features for an existing one, or someone to fix what's broken, let's talk.</p>
                 <div class="mt-4">
                     <span class="badge bg-primary me-2">Unity</span>
                     <span class="badge bg-secondary me-2">C#</span>
-                    <span class="badge bg-info me-2">Game Development</span>
-                    <span class="badge bg-success">Indie Games</span>
+                    <span class="badge bg-info me-2">Card &amp; Casual Games</span>
+                    <span class="badge bg-success me-2">Mobile</span>
+                    <span class="badge bg-warning text-dark">Flash / AS3</span>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="container">
+    <h2 class="section-title fade-in">Services</h2>
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="service-card fade-in">
+                <i class="fas fa-dice" aria-hidden="true"></i>
+                <h5>Card, bingo and casual games</h5>
+                <p>New games built in Unity, from prototype to release, with solid game rules and business logic.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+            <div class="service-card fade-in">
+                <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                <h5>New features for existing games</h5>
+                <p>Gameplay systems, UI, game modes and mechanics added to your project without breaking what already works.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+            <div class="service-card fade-in">
+                <i class="fas fa-bug" aria-hidden="true"></i>
+                <h5>Bug fixing and maintenance</h5>
+                <p>Finding and fixing bugs, cleaning up code and keeping live games stable over time.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-5">
+            <div class="service-card fade-in">
+                <i class="fas fa-sync-alt" aria-hidden="true"></i>
+                <h5>Flash / AS3 game porting</h5>
+                <p>Bringing legacy ActionScript 3 and Flash games to Unity or HTML5 so they run again on modern devices.</p>
             </div>
         </div>
     </div>
@@ -658,119 +580,174 @@
 <!-- Projects Section -->
 <section id="projects" class="container">
     <h2 class="section-title fade-in">Projects</h2>
-    
-    <div id="projectsCarousel" class="carousel slide projects-carousel" data-bs-interval="false">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="project-card fade-in">
-                            <img src="assets/images/monsters-and-soldiers.gif" alt="Monsters And Soldiers" class="img-fluid project-image">
-                            <h4 class="project-title">Monsters And Soldiers</h4>
-                            <p class="project-description">A personal project where I'm developing a puzzle game inspired by "Tents and Trees", but with custom rules and a unique theme.<br>
-                                The game is being built from scratch, featuring grid-based mechanics and animations. All programming is done entirely by me, while the visual assets are sourced from free or purchased asset packs available online.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/leuraupp/MonstersAndSoldiers2" target="_blank" class="project-link">
-                                    <i class="fab fa-github me-2"></i>View on GitHub
-                                </a>
-                                <a href="games/monsters-and-soldiers/index.html" target="_blank" class="project-link play-link">
-                                    <i class="fas fa-gamepad me-2"></i>Play Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="carousel-item">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="project-card fade-in">
-                            <img src="assets/images/ebac-plataformer3d.png" alt="Projeto 2" class="img-fluid project-image">
-                            <h4 class="project-title">EBAC - Plataformer 3D</h4>
-                            <p class="project-description">Project developed as part of the EBAC course – From Zero to Pro.".<br>
-                                This project was created as an exercise to study the fundamentals of building a 3D platformer using Unity. The goal was to explore Unity's core features while developing a simple yet functional 3D game.<br>
-                                The game includes:<br><br>
-                                Player movement and controls<br>
-                                Weapon switching system<br>
-                                Multiple enemy types with distinct behaviors<br>
-                                Checkpoint system<br>
-                                A stage boss that appears upon reaching a specific area<br>
-                                Collectible items and power-ups<br>
-                                Particle effects to enhance gameplay feedback<br>
-                                Save system to store and load game progress<br>
-                                Character animations and sound effects<br><br>
-                                This project was a great opportunity to apply Unity's tools and systems in a complete, hands-on game development experience.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/leuraupp/EBAC-3DPlatformGame" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt me-2"></i>View on GitHub
-                                </a>
-                                <a href="games/ebac-plataformer3d/index.html" target="_blank" class="project-link play-link">
-                                    <i class="fas fa-gamepad me-2"></i>Play Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <h3 class="projects-subtitle fade-in">Professional work</h3>
+    <div class="row g-4 mb-5">
+        <div class="col-md-6">
+            <div class="project-card fade-in">
+                <img src="assets/images/mega-bingo.jpg" alt="Mega Bingo gameplay on a phone, with bingo cards and a BINGO celebration" class="img-fluid project-image" loading="lazy" onerror="this.remove()">
+                <span class="project-tag">Built from scratch, live on Google Play</span>
+                <h4 class="project-title">Mega Bingo</h4>
+                <p class="project-description">A multiplayer bingo game on the GameVelvet platform, built from scratch. Working alongside the design team, I programmed all of the game logic and rules, and I keep maintaining it with new features and bug fixes for a live player base.</p>
+                <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=air.br.com.bingo.mobile" target="_blank" rel="noopener" class="project-link play-link">
+                        <i class="fab fa-google-play me-2" aria-hidden="true"></i>View on Google Play
+                    </a>
                 </div>
             </div>
-            
-            <div class="carousel-item">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="project-card fade-in">
-                            <img src="assets/images/ebac-plataformer2d.gif" alt="Projeto 3" class="img-fluid project-image">
-                            <h4 class="project-title">EBAC - Plataformer 2D</h4>
-                            <p class="project-description">This project is part of the EBAC course "Unity: Zero to Pro".<br>
-                            It's a simple 2D platformer game where the player can move from side to side, featuring character animations, enemy animations, UI elements, item collection, and sound effects (SFX).</p>
-                            <div class="project-links">
-                                <a href="https://github.com/leuraupp/EBAC-Plataformer2D" target="_blank" class="project-link">
-                                    <i class="fas fa-external-link-alt me-2"></i>View on GitHub
-                                </a>
-                                <a href="games/ebac-plataformer2d/index.html" target="_blank" class="project-link play-link">
-                                    <i class="fas fa-gamepad me-2"></i>Play Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Template for adding more projects:
-            <div class="carousel-item">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="project-card fade-in">
-                            <img src="assets/images/your-project-image.gif" alt="Your Project" class="img-fluid project-image">
-                            <h4 class="project-title">Your Project Title</h4>
-                            <p class="project-description">Your project description here...</p>
-                            <div class="project-links">
-                                <a href="https://github.com/your-repo" target="_blank" class="project-link">
-                                    <i class="fab fa-github me-2"></i>View on GitHub
-                                </a>
-                                <a href="games/your-game/index.html" target="_blank" class="project-link play-link">
-                                    <i class="fas fa-gamepad me-2"></i>Play Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            -->
         </div>
-        
-        <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="col-md-6">
+            <div class="project-card fade-in">
+                <img src="assets/images/conquian.jpg" alt="Conquian card game on a phone, with the game's mariachi mascot" class="img-fluid project-image" loading="lazy" onerror="this.remove()">
+                <span class="project-tag">Built from scratch, live on Google Play</span>
+                <h4 class="project-title">Conquian</h4>
+                <p class="project-description">A traditional card game on the GameVelvet platform, built from scratch. Working alongside the design team, I programmed all of the game logic and card rules, and I keep maintaining it with new features and bug fixes.</p>
+                <div class="project-links">
+                    <a href="https://play.google.com/store/apps/details?id=air.br.com.conquian.mobile" target="_blank" rel="noopener" class="project-link play-link">
+                        <i class="fab fa-google-play me-2" aria-hidden="true"></i>View on Google Play
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="projects-subtitle fade-in">Unity projects</h3>
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card fade-in">
+                <img src="assets/images/monsters-and-soldiers.gif" alt="Monsters and Soldiers gameplay" class="img-fluid project-image">
+                <span class="project-tag">Original game, in development</span>
+                <h4 class="project-title">Monsters and Soldiers</h4>
+                <p class="project-description">A grid-based puzzle game inspired by "Tents and Trees", with custom rules and a unique theme. Built from scratch with all programming done by me; visual assets come from free and purchased asset packs.</p>
+                <div class="project-links">
+                    <a href="https://github.com/leuraupp/MonstersAndSoldiers2" target="_blank" rel="noopener" class="project-link">
+                        <i class="fab fa-github me-2" aria-hidden="true"></i>View on GitHub
+                    </a>
+                    <a href="games/monsters-and-soldiers/index.html" target="_blank" class="project-link play-link">
+                        <i class="fas fa-gamepad me-2" aria-hidden="true"></i>Play Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card fade-in">
+                <img src="assets/images/ebac-plataformer3d.png" alt="3D Platformer screenshot" class="img-fluid project-image">
+                <span class="project-tag">EBAC course project</span>
+                <h4 class="project-title">3D Platformer</h4>
+                <p class="project-description">A complete 3D platformer built during the EBAC "Unity: Zero to Pro" course. Features include:</p>
+                <ul class="project-features">
+                    <li>Weapon switching and multiple enemy types</li>
+                    <li>Boss fight, checkpoints and power-ups</li>
+                    <li>Save and load system</li>
+                    <li>Particle effects, animations and sound</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/leuraupp/EBAC-3DPlatformGame" target="_blank" rel="noopener" class="project-link">
+                        <i class="fab fa-github me-2" aria-hidden="true"></i>View on GitHub
+                    </a>
+                    <a href="games/ebac-plataformer3d/index.html" target="_blank" class="project-link play-link">
+                        <i class="fas fa-gamepad me-2" aria-hidden="true"></i>Play Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+            <div class="project-card fade-in">
+                <img src="assets/images/ebac-plataformer2d.gif" alt="2D Platformer gameplay" class="img-fluid project-image">
+                <span class="project-tag">EBAC course project</span>
+                <h4 class="project-title">2D Platformer</h4>
+                <p class="project-description">A 2D platformer built during the EBAC "Unity: Zero to Pro" course, with character and enemy animations, UI, item collection and sound effects.</p>
+                <div class="project-links">
+                    <a href="https://github.com/leuraupp/EBAC-Plataformer2D" target="_blank" rel="noopener" class="project-link">
+                        <i class="fab fa-github me-2" aria-hidden="true"></i>View on GitHub
+                    </a>
+                    <a href="games/ebac-plataformer2d/index.html" target="_blank" class="project-link play-link">
+                        <i class="fas fa-gamepad me-2" aria-hidden="true"></i>Play Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume" class="container">
+    <h2 class="section-title fade-in">Resume</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 mb-4">
+            <div class="profile-card fade-in">
+                <h4><i class="fas fa-briefcase me-2" aria-hidden="true"></i>Experience</h4>
+                <div class="skill-item">
+                    <h6>Senior Game Developer at Fontec</h6>
+                    <p class="text-secondary">GameVelvet (Megajogos) | 2013 - Present</p>
+                    <p class="text-secondary">Built Mega Bingo and Conquian from scratch, programming all of the game logic alongside the design team. Developed casual, card and bingo games from concept to release, implemented game rules, gameplay systems and new features on a live platform, and maintained games across multiple titles.</p>
+                    <p class="text-secondary">Unity, C#, ActionScript 3, Adobe Animate, Java</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 mb-4">
+            <div class="profile-card fade-in">
+                <h4><i class="fas fa-code me-2" aria-hidden="true"></i>Skills</h4>
+                <div class="skill-item">
+                    <h6><i class="fas fa-laptop-code me-2" aria-hidden="true"></i>Programming Languages</h6>
+                    <p class="text-secondary">C#, ActionScript 3, Java</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fab fa-unity me-2" aria-hidden="true"></i>Engines and Tools</h6>
+                    <p class="text-secondary">Unity, Adobe Animate, Git</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-cogs me-2" aria-hidden="true"></i>Game Development</h6>
+                    <p class="text-secondary">Gameplay Programming, Game Rules and Business Logic, Bug Fixing, Maintenance</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-users me-2" aria-hidden="true"></i>Collaboration</h6>
+                    <p class="text-secondary">Multidisciplinary Teams</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-language me-2" aria-hidden="true"></i>Languages</h6>
+                    <p class="text-secondary">Portuguese (Native), English (Intermediate)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8 mb-4">
+            <div class="profile-card fade-in">
+                <h4><i class="fas fa-graduation-cap me-2" aria-hidden="true"></i>Education</h4>
+                <div class="skill-item">
+                    <h6><i class="fas fa-university me-2" aria-hidden="true"></i>Bachelor's Degree - Technology in Digital Games</h6>
+                    <p class="text-secondary">Univali - Universidade do Vale do Itajaí | 2012 - 2017</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-university me-2" aria-hidden="true"></i>Postgraduate Degree - Game Development</h6>
+                    <p class="text-secondary">UNISUL | 2025</p>
+                </div>
+                <div class="skill-item">
+                    <h6><i class="fas fa-book-open me-2" aria-hidden="true"></i>Unity: Zero to Pro</h6>
+                    <p class="text-secondary">EBAC - Britain School of Arts and Technology | 2023 - 2025</p>
+                </div>
+
+                <h6 class="mt-4 mb-3">Certificates</h6>
+                <div class="certificate-links">
+                    <a class="cert-link" href="https://drive.google.com/file/d/1fOWky4-hlF_JGbj-Af8pLN7KQVQcjhUs/view?usp=sharing" target="_blank" rel="noopener">UNISUL Postgraduate</a>
+                    <a class="cert-link" href="https://www.linkedin.com/posts/leonardo-raupp-225b5754_certificado-de-conclus%C3%A3o-unity-do-zero-ao-activity-7348405260933107712-Q2D2?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAuPiX0BCrtmoQpWA7Ai2-G7uCnKKDYmj94" target="_blank" rel="noopener">EBAC Unity: Zero to Pro</a>
+                    <a class="cert-link" href="https://cursos.alura.com.br/certificate/29528f08-cba5-4b56-9c57-5d3e3f5232aa?lang=pt_BR" target="_blank" rel="noopener">Alura: 2D Game</a>
+                    <a class="cert-link" href="https://cursos.alura.com.br/certificate/b7cd8936-5c46-4c47-8b81-543cab8a745a?lang=pt_BR" target="_blank" rel="noopener">Alura: Visual Effects</a>
+                    <a class="cert-link" href="https://cursos.alura.com.br/certificate/32acb6aa-9b78-4ac3-9563-93729db1d4b3?lang=pt_BR" target="_blank" rel="noopener">Alura: Multiplayer</a>
+                    <a class="cert-link" href="https://academy.zenva.com/certificate/b4e735241626" target="_blank" rel="noopener">Zenva: Intro to Unity</a>
+                    <a class="cert-link" href="https://academy.zenva.com/certificate/55b8859326b9" target="_blank" rel="noopener">Zenva: C# Fundamentals</a>
+                    <a class="cert-link" href="https://academy.zenva.com/certificate/37bcbb20fb6c" target="_blank" rel="noopener">Zenva: First 3D Game</a>
+                    <a class="cert-link" href="https://academy.zenva.com/certificate/6a0aba6cff5c" target="_blank" rel="noopener">Zenva: Micro-Farming RPG</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -783,299 +760,18 @@
             <div class="profile-card fade-in">
                 <div class="text-secondary">
                     <p>Since I was a kid, I've always been passionate about games. My first console was an Atari, and with it came my love for the world of gaming. I've always found it fascinating and magical.</p>
-                    
+
                     <p>Later, while working at a local LAN house in my hometown, I had my first real contact with programming by setting up a private Ragnarok server. That experience opened my eyes to how games actually work behind the scenes—it was incredible.</p>
-                    
+
                     <p>When it was time to apply for college, there were no courses related to game development, so that dream had to be put on hold for a while. But one day, a new program opened in my city: a degree in Digital Game Technologies at Univali (Universidade do Vale do Itajaí). I didn't think twice and joined one of the first classes of the course.</p>
-                    
+
                     <p>Around the same time, I started working in the legal software department at a company called Fontec, where they were developing a gaming app called GameVelvet (also known as Megajogos in Brazil). My dream of working with games was getting closer, but still not quite there. Then, after graduating, I was invited to join the GameVelvet team, developing new games and assets for the app.</p>
-                    
-                    <p>After years working with ActionScript 3 and Adobe Animate, I finally decided it was time to take the next big step in my career. I started diving deep into Unity, creating several personal projects as well as coursework projects.</p>
-                    
-                    <p>This portfolio is a small showcase of these projects.</p>
-                    
-                    <p>Now, I'm looking for new challenges and opportunities. I want to specialize even further in Unity and keep improving my skills with the goal of starting an international career in game development.</p>
-                    
-                    <p>If you've made it this far—thank you for reading my story. I hope you enjoy exploring my projects!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Resume Section -->
-<section id="resume" class="container">
-    <h2 class="section-title fade-in">Resume</h2>
-    
-    <div class="row justify-content-center">
-        <div class="col-lg-8 mb-4">
-            <div class="profile-card fade-in">
-                <h4><i class="fas fa-briefcase me-2"></i>Professions</h4>
-                <div class="skill-item">
-                    <h6>Game Developer Senior at Fontec</h6>
-                    <p class="text-secondary">GameVelvet • 2013 - Present</p>
-                    <p class="text-secondary">Full-cycle game developer: from concept to completion</p>
-                    <p class="text-secondary">Specialized in ActionScript 3, Java, Adobe Animate and Unity</p>
-                </div>
-            </div>
-        </div>
-    </div>
-        
-    <div class="row justify-content-center">
-        <div class="col-lg-8 mb-4">
-            <div class="profile-card fade-in">
-                <h4><i class="fas fa-code me-2"></i>Skills</h4>
-                <div class="skill-item">
-                    <h6><i class="fas fa-laptop-code me-2"></i>Programming Languages</h6>
-                    <p class="text-secondary">Java, ActionScript 3, C#</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fab fa-unity me-2"></i>Game Engines</h6>
-                    <p class="text-secondary">Unity, Adobe Animate</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fas fa-gamepad me-2"></i>Game Development</h6>
-                    <p class="text-secondary">Game Design Principles, Bug Fixing, Maintenance</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fas fa-cogs me-2"></i>Implementation</h6>
-                    <p class="text-secondary">Gameplay Mechanics, Business Rules, Logic Development</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fas fa-users me-2"></i>Collaboration</h6>
-                    <p class="text-secondary">Teamwork and Cross-functional Collaboration</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <p>After years working with ActionScript 3 and Adobe Animate, I took the next big step in my career and dove deep into Unity, building personal and course projects to master the engine.</p>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-8 mb-4">
-            <div class="profile-card fade-in">
-                <h4><i class="fas fa-graduation-cap me-2"></i>Education</h4>
-                <div class="skill-item">
-                    <h6><i class="fas fa-university me-2"></i>Bachelor's Degree - Technology in Digital Games</h6>
-                    <p class="text-secondary">Univali - Universidade do Vale do Itajaí • 2012 - 2017</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fas fa-book-open me-2"></i>Unity: Zero to Pro</h6>
-                    <p class="text-secondary">EBAC - Britain School of Arts and Technology • 2023 - 2025</p>
-                </div>
-				<div class="skill-item">
-                    <h6><i class="fas fa-book-open me-2"></i>Post degree in Game Development</h6>
-                    <p class="text-secondary">UNISUL • 2025</p>
-                </div>
-            </div>
-        </div>
-    </div>
-        
-    <div class="row justify-content-center">
-        <div class="col-lg-8 mb-4">
-            <div class="profile-card fade-in">
-                <h4><i class="fas fa-certificate me-2"></i>Certifications</h4>
-                <div class="skill-item">
-                    <h6><i class="fas fa-award me-2"></i>EBAC - Unity: Zero to Pro</h6>
-                    <p class="text-secondary">Unity Game Development</p>
-                </div>
-				<div class="skill-item">
-                    <h6><i class="fas fa-award me-2"></i>UNISUL</h6>
-                    <p class="text-secondary">Post degree in Game Development</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fas fa-award me-2"></i>Alura Unity courses</h6>
-                    <p class="text-secondary">Part 1: Creating a 2D Game</p>
-                    <p class="text-secondary">Part 2: Adding Visual Effects to Your Game</p>
-                    <p class="text-secondary">Part 3: Creating a Multiplayer Game</p>
-                </div>
-                <div class="skill-item">
-                    <h6><i class="fas fa-star me-2"></i>Zenva Academy</h6>
-                    <p class="text-secondary">Intro to Game Development with Unity</p>
-                    <p class="text-secondary">Unity Mini-Projects - C# Fundamentals</p>
-                    <p class="text-secondary">Create Your First 3D Game in Unity</p>
-                    <p class="text-secondary">Construct a Micro-Farming RPG in Unity</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <p>Today I combine that experience to help clients build, improve and maintain their games as a freelancer, and I'm always open to new challenges, including international projects.</p>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <div class="profile-card fade-in">
-                <h4><i class="fas fa-certificate me-2"></i>Certificates Gallery</h4>
-                
-                <div id="certificatesCarousel" class="carousel slide certificate-carousel" data-bs-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/unisul.png" alt="UNISUL Certificate" class="certificate-image">
-                                        <h5 class="certificate-title">UNISUL</h5>
-                                        <p class="certificate-description">Post degree in Game Development</p>
-                                        <a href="https://drive.google.com/file/d/1fOWky4-hlF_JGbj-Af8pLN7KQVQcjhUs/view?usp=sharing" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						
-						<div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/EBAC-unity-zero-to-pro.png" alt="EBAC Certificate" class="certificate-image">
-                                        <h5 class="certificate-title">EBAC - Unity: Zero to Pro</h5>
-                                        <p class="certificate-description">Unity Game Development</p>
-                                        <a href="https://www.linkedin.com/posts/leonardo-raupp-225b5754_certificado-de-conclus%C3%A3o-unity-do-zero-ao-activity-7348405260933107712-Q2D2?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAuPiX0BCrtmoQpWA7Ai2-G7uCnKKDYmj94" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Alura-criando-um-jogos-2d.png" alt="Alura Certificate" class="certificate-image">
-                                        <h5 class="certificate-title">Alura Unity course - Creating a 2D Game</h5>
-                                        <p class="certificate-description">Creating a 2D Game with Unity</p>
-                                        <a href="https://cursos.alura.com.br/certificate/29528f08-cba5-4b56-9c57-5d3e3f5232aa?lang=pt_BR" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Alura-adicionando-efeitos-visuais.png" alt="Alura Certificate 2" class="certificate-image">
-                                        <h5 class="certificate-title">Alura Unity course - Adding Visual Effects to Your Game</h5>
-                                        <p class="certificate-description">Adding Visual Effects to Your Game</p>
-                                        <a href="https://cursos.alura.com.br/certificate/b7cd8936-5c46-4c47-8b81-543cab8a745a?lang=pt_BR" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Alura-criando-um-jogo-multiplayer.png" alt="Alura Certificate 3" class="certificate-image">
-                                        <h5 class="certificate-title">Alura Unity course - Creating a Multiplayer Game</h5>
-                                        <p class="certificate-description">Creating a Multiplayer Game</p>
-                                        <a href="https://cursos.alura.com.br/certificate/32acb6aa-9b78-4ac3-9563-93729db1d4b3?lang=pt_BR" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Zenva-intro-unity.png" alt="Zenva Certificate 1" class="certificate-image">
-                                        <h5 class="certificate-title">Zenva Academy - Intro to Game Development with Unity</h5>
-                                        <p class="certificate-description">Fundamentals of Unity Game Development</p>
-                                        <a href="https://academy.zenva.com/certificate/b4e735241626" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Zenva-unity-mini-projects-c-fundamentals.png" alt="Zenva Certificate 2" class="certificate-image">
-                                        <h5 class="certificate-title">Unity Mini-Projects - C# Fundamentals</h5>
-                                        <p class="certificate-description">C# Programming for Unity Games</p>
-                                        <a href="https://academy.zenva.com/certificate/55b8859326b9" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Zenva-my-first-3d-game.png" alt="Zenva Certificate 3" class="certificate-image">
-                                        <h5 class="certificate-title">Zenva Academy - Create Your First 3D Game in Unity</h5>
-                                        <p class="certificate-description">3D Game Development Fundamentals</p>
-                                        <a href="https://academy.zenva.com/certificate/37bcbb20fb6c" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/Zenva-micro-farming-rpg.png" alt="Zenva Certificate 4" class="certificate-image">
-                                        <h5 class="certificate-title">Zenva Academy - Construct a Micro-Farming RPG in Unity</h5>
-                                        <p class="certificate-description">Advanced Unity Game Development</p>
-                                        <a href="https://academy.zenva.com/certificate/6a0aba6cff5c" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <div class="certificate-card fade-in">
-                                        <img src="assets/images/certificates/TDC-Participating.jpg" alt="TDC Certificate" class="certificate-image">
-                                        <h5 class="certificate-title">TDC - Participating</h5>
-                                        <p class="certificate-description">TDC - Participating</p>
-                                        <a href="https://www.linkedin.com/posts/leonardo-raupp-225b5754_participei-da-trilha-de-ia-generativa-do-activity-7341533469212061696-qivU?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAuPiX0BCrtmoQpWA7Ai2-G7uCnKKDYmj94" target="_blank" class="certificate-link">
-                                            <i class="fas fa-external-link-alt me-2"></i>View Certificate
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button class="carousel-control-prev" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#certificatesCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                    
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                        <button type="button" data-bs-target="#certificatesCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                    </div>
+                    <p>If you've made it this far, thank you for reading my story!</p>
                 </div>
             </div>
         </div>
@@ -1084,25 +780,25 @@
 
 <!-- Contacts Section -->
 <section id="contacts" class="container">
-    <h2 class="section-title fade-in">Contacts</h2>
+    <h2 class="section-title fade-in">Contact</h2>
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="contact-card fade-in">
                 <h4>Let's work together!</h4>
-                <p class="text-secondary mb-4">Feel free to send me a message to talk about my projects, job opportunities, or just to have a cool chat about games.</p>
-                
+                <p class="text-secondary mb-4">Have a game to build, a feature to add, a bug to fix or a Flash game to bring back? Tell me about your project.</p>
+
                 <div class="row mb-4">
                     <div class="col-md-6">
-                        <p><i class="fas fa-envelope me-2"></i>leuraupp@gmail.com</p>
+                        <p><i class="fas fa-envelope me-2" aria-hidden="true"></i><a href="mailto:leuraupp@gmail.com" class="project-link">leuraupp@gmail.com</a></p>
                     </div>
                     <div class="col-md-6">
-                        <p><i class="fas fa-phone me-2"></i>+5548996179598</p>
+                        <p><i class="fab fa-whatsapp me-2" aria-hidden="true"></i><a href="https://wa.me/5548996179598" target="_blank" rel="noopener" class="project-link">+55 48 99617-9598</a></p>
                     </div>
                 </div>
-                
+
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/leonardo-raupp-225b5754/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/leuraupp" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/leonardo-raupp-225b5754/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/leuraupp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </div>
@@ -1112,112 +808,38 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     // Scroll animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-        } else {
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        }
+        navbar.style.background = window.scrollY > 100 ? 'rgba(15, 23, 42, 0.98)' : 'rgba(15, 23, 42, 0.95)';
     });
 
-    // Smooth scrolling for navbar links
+    // Smooth scrolling for in-page links (and close the mobile menu)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
+            const id = this.getAttribute('href');
+            if (id.length < 2) return;
+            const target = document.querySelector(id);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const menu = document.getElementById('navbarNav');
+                if (menu && menu.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                }
             }
         });
     });
-
-    // Projects Carousel Enhancement
-    const projectsCarousel = document.getElementById('projectsCarousel');
-    if (projectsCarousel) {
-        const carousel = new bootstrap.Carousel(projectsCarousel, {
-            interval: false,
-            wrap: true,
-            keyboard: true,
-            pause: 'hover'
-        });
-
-        // Add fade-in animation to carousel items when they become active
-        projectsCarousel.addEventListener('slid.bs.carousel', function (event) {
-            const activeItem = event.target.querySelector('.carousel-item.active');
-            const fadeElements = activeItem.querySelectorAll('.fade-in');
-            
-            fadeElements.forEach(el => {
-                el.classList.remove('visible');
-                setTimeout(() => {
-                    el.classList.add('visible');
-                }, 100);
-            });
-        });
-
-        // Initialize first slide animations
-        const firstSlide = projectsCarousel.querySelector('.carousel-item.active');
-        if (firstSlide) {
-            const fadeElements = firstSlide.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => {
-                el.classList.add('visible');
-            });
-        }
-    }
-
-    // Certificates Carousel Enhancement
-    const certificatesCarousel = document.getElementById('certificatesCarousel');
-    if (certificatesCarousel) {
-        const carousel = new bootstrap.Carousel(certificatesCarousel, {
-            interval: false,
-            wrap: true,
-            keyboard: true,
-            pause: 'hover'
-        });
-
-        // Add fade-in animation to carousel items when they become active
-        certificatesCarousel.addEventListener('slid.bs.carousel', function (event) {
-            const activeItem = event.target.querySelector('.carousel-item.active');
-            const fadeElements = activeItem.querySelectorAll('.fade-in');
-            
-            fadeElements.forEach(el => {
-                el.classList.remove('visible');
-                setTimeout(() => {
-                    el.classList.add('visible');
-                }, 100);
-            });
-        });
-
-        // Initialize first slide animations
-        const firstSlide = certificatesCarousel.querySelector('.carousel-item.active');
-        if (firstSlide) {
-            const fadeElements = firstSlide.querySelectorAll('.fade-in');
-            fadeElements.forEach(el => {
-                el.classList.add('visible');
-            });
-        }
-    }
 </script>
 </body>
-</html> 
+</html>
