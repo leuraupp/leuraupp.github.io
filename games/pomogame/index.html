@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Pomogame</title>
+    <style>
+      :root { --footer-height: 40px; }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: #0a0c16;
+        color: #e8ecff;
+        font: 14px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        overflow: hidden;
+      }
+
+      #unity-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100svh;
+      }
+
+      /* O canvas acompanha a janela mantendo 16:9, em vez dos 1280px fixos do
+         template padrão, que estouram a tela em notebook menor e no celular. */
+      #unity-canvas {
+        width: min(100vw, calc((100svh - var(--footer-height)) * 16 / 9));
+        aspect-ratio: 16 / 9;
+        height: auto;
+        display: block;
+        background: #0a0c16;
+        outline: none;
+      }
+
+      #unity-loading-bar {
+        position: absolute;
+        inset: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      #unity-loading-bar p { margin: 0; color: #8b93b8; letter-spacing: .04em; }
+
+      #unity-progress-bar-empty {
+        width: 240px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, .10);
+        overflow: hidden;
+      }
+
+      #unity-progress-bar-full {
+        width: 0;
+        height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #4f7cff, #7aa2ff);
+        transition: width .2s ease;
+      }
+
+      #unity-footer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        height: var(--footer-height);
+        width: min(100vw, calc((100svh - var(--footer-height)) * 16 / 9));
+        padding: 0 4px;
+      }
+
+      #unity-build-title { font-weight: 600; letter-spacing: .02em; }
+
+      #unity-fullscreen-button {
+        margin-left: auto;
+        padding: 5px 12px;
+        border: 1px solid rgba(255, 255, 255, .16);
+        border-radius: 7px;
+        background: rgba(255, 255, 255, .06);
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      #unity-fullscreen-button:hover { background: rgba(255, 255, 255, .12); }
+
+      #unity-warning { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); }
+      #unity-warning div { margin: 4px 0; padding: 10px; border-radius: 6px; color: #10121c; }
+    </style>
+  </head>
+  <body>
+    <div id="unity-container">
+      <canvas id="unity-canvas" width="1280" height="720" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <p>Carregando Pomogame…</p>
+        <div id="unity-progress-bar-empty"><div id="unity-progress-bar-full"></div></div>
+      </div>
+      <div id="unity-warning"></div>
+      <div id="unity-footer">
+        <div id="unity-build-title">Pomogame</div>
+        <button id="unity-fullscreen-button" type="button">Tela cheia</button>
+      </div>
+    </div>
+
+    <script>
+      var canvas = document.querySelector("#unity-canvas");
+
+      function unityShowBanner(msg, type) {
+        var banner = document.querySelector("#unity-warning");
+        var div = document.createElement("div");
+        div.innerHTML = msg;
+        div.style.background = type === "error" ? "#ff6b6b" : "#ffd93d";
+        banner.appendChild(div);
+        if (type !== "error") setTimeout(function () { banner.removeChild(div); }, 5000);
+      }
+
+      var buildUrl = "Build";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/WebGL.data.unityweb",
+        frameworkUrl: buildUrl + "/WebGL.framework.js.unityweb",
+        codeUrl: buildUrl + "/WebGL.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Pomogame",
+        productVersion: "1.0",
+        showBanner: unityShowBanner,
+      };
+
+      document.querySelector("#unity-loading-bar").style.display = "flex";
+
+      var script = document.createElement("script");
+      script.src = buildUrl + "/WebGL.loader.js";
+      script.onload = function () {
+        createUnityInstance(canvas, config, function (progress) {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+        }).then(function (unityInstance) {
+          document.querySelector("#unity-loading-bar").style.display = "none";
+          document.querySelector("#unity-fullscreen-button").onclick = function () {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch(function (message) {
+          unityShowBanner(message, "error");
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>
